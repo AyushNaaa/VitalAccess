@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip --version)",
+      "Bash(pip3 --version)",
+      "Bash(pip install:*)",
+      "Bash(taskkill //F //IM python.exe)",
+      "Bash(mkdir -p \"/c/Users/divya/Desktop/Projects/VitalAccess/vital_access/lib/services\")",
+      "Bash(mkdir -p \"/c/Users/divya/Desktop/Projects/VitalAccess/vital_access/lib/widgets\")",
+      "Bash(flutter analyze:*)",
+      "Bash(export 'PATH=$PATH:/c/Users/divya/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/divya/flutter/bin:/c/flutter/bin' which flutter)",
+      "Read(//c/Users/divya/**)",
+      "Bash(/c/Users/divya/flutter/bin/flutter analyze:*)"
+    ]
+  }
+}
