@@ -1,6 +1,6 @@
-# VitalAccess
+# Vytal
 
-**VitalAccess** is a mobile health triage app that uses a phone's front camera to estimate vitals, collects symptoms through an AI-guided conversation, and produces a plain-language health summary the user can share with a clinician.
+**Vytal** is a mobile health triage app that uses a phone's front camera to estimate vitals, collects symptoms through an AI-guided conversation, and produces a plain-language health summary the user can share with a clinician.
 
 > **Triage support, not medical diagnosis.**
 
@@ -124,7 +124,7 @@ Language Select → Face Scan (30s) → Vitals Display → Symptom Chat → Proc
 ## Project Structure
 
 ```
-VitalAccess/
+Vytal/
 ├── CV_Pipeline/            # Python vitals estimation server
 │   ├── main.py             # FastAPI app + endpoints
 │   ├── face_detection.py   # MediaPipe + optical flow + ROI extraction
@@ -134,7 +134,7 @@ VitalAccess/
 │   ├── models.py           # Pydantic request/response models
 │   └── requirements.txt
 │
-└── vital_access/           # Flutter app
+└── vytal_access/           # Flutter app
     └── lib/
         ├── main.dart
         ├── app.dart
@@ -204,7 +204,7 @@ flutter run
 
 ### Demo Mode
 
-Tap the VitalAccess logo **3 times** on the language screen to enable demo mode. This bypasses the CV Pipeline server and uses a mock vitals service — useful for testing the UI flow without running the backend.
+Tap the Vytal logo **3 times** on the language screen to enable demo mode. This bypasses the CV Pipeline server and uses a mock vitals service — useful for testing the UI flow without running the backend.
 
 ---
 
@@ -234,4 +234,4 @@ Tap the VitalAccess logo **3 times** on the language screen to enable demo mode.
 
 ## Disclaimer
 
-VitalAccess is designed for **triage support and health communication**, not as a replacement for professional medical care. All output should be reviewed by a qualified clinician.
+Vytal is designed for **triage support and health communication**, not as a replacement for professional medical care. All output should be reviewed by a qualified clinician.
