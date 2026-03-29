@@ -239,9 +239,9 @@ class _ScanScreenState extends State<ScanScreen>
     _vitalsService!.startSession();
 
     ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Using estimated vitals'),
-        duration: Duration(seconds: 3),
+      SnackBar(
+        content: Text(t(context.read<SessionProvider>().language, 'using_demo_vitals')),
+        duration: const Duration(seconds: 3),
         behavior: SnackBarBehavior.floating,
       ),
     );
@@ -276,9 +276,8 @@ class _ScanScreenState extends State<ScanScreen>
       context: context,
       barrierDismissible: false,
       builder: (_) => AlertDialog(
-        title: const Text('Camera Access Required'),
-        content: const Text(
-            'VitalAccess needs camera access to measure your heart rate and other vitals.'),
+        title: Text(t(lang, 'camera_title')),
+        content: Text(t(lang, 'camera_description')),
         actions: [
           TextButton(
             onPressed: () {
@@ -646,7 +645,7 @@ class _ScanScreenState extends State<ScanScreen>
               ),
               const SizedBox(height: 8),
               Text(
-                'Moving to symptom intake...',
+                t(lang, 'moving_to_symptoms'),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 14,
@@ -654,7 +653,7 @@ class _ScanScreenState extends State<ScanScreen>
                 ),
               ),
               const SizedBox(height: 32),
-              VitalsDisplay(vitals: _finalResult!),
+              VitalsDisplay(vitals: _finalResult!, lang: lang),
             ],
           ),
         ),

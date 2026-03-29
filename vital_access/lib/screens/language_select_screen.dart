@@ -147,7 +147,7 @@ class _LanguageSelectScreenState extends State<LanguageSelectScreen>
           ),
           const SizedBox(height: 10),
           Text(
-            'Health triage in your pocket',
+            t('en', 'app_tagline'),
             style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                   color: AppColors.subtle,
                 ),
@@ -159,7 +159,7 @@ class _LanguageSelectScreenState extends State<LanguageSelectScreen>
 
   Widget _buildLanguageLabel() {
     return Text(
-      'Select your language',
+      t('en', 'select_language'),
       style: Theme.of(context).textTheme.titleMedium?.copyWith(
             color: AppColors.subtle,
             fontWeight: FontWeight.w500,
@@ -204,7 +204,7 @@ class _LanguageSelectScreenState extends State<LanguageSelectScreen>
           const SizedBox(width: 8),
           Expanded(
             child: Text(
-              'This app provides health triage, not medical diagnosis.',
+              t('en', 'disclaimer_short'),
               style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: AppColors.urgent,
                     fontSize: 12,

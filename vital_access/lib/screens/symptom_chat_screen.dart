@@ -318,7 +318,7 @@ class _SymptomChatScreenState extends State<SymptomChatScreen> {
                 color: Colors.white, size: 16),
           ),
           const SizedBox(width: 8),
-          const Text('Symptom Check'),
+          Text(t(_language, 'chat_title')),
         ],
       ),
       actions: [
@@ -388,7 +388,7 @@ class _SymptomChatScreenState extends State<SymptomChatScreen> {
       child: OutlinedButton.icon(
         onPressed: _isTyping ? null : _onForceFinish,
         icon: const Icon(Icons.check_circle_outline_rounded, size: 18),
-        label: const Text('Finish symptom intake'),
+        label: Text(t(_language, 'finish_intake')),
         style: OutlinedButton.styleFrom(
           minimumSize: const Size.fromHeight(44),
         ),

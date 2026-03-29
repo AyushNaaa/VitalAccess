@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../config/constants.dart';
 import '../config/theme.dart';
 import '../models/vital_scan_result.dart';
 
@@ -6,8 +7,9 @@ import '../models/vital_scan_result.dart';
 /// Each card fades in and slides up with a staggered entrance animation.
 class VitalsDisplay extends StatefulWidget {
   final VitalScanResult vitals;
+  final String lang;
 
-  const VitalsDisplay({super.key, required this.vitals});
+  const VitalsDisplay({super.key, required this.vitals, this.lang = 'en'});
 
   @override
   State<VitalsDisplay> createState() => _VitalsDisplayState();
@@ -65,30 +67,31 @@ class _VitalsDisplayState extends State<VitalsDisplay>
   @override
   Widget build(BuildContext context) {
     final v = widget.vitals;
+    final l = widget.lang;
     final cards = [
       _VitalCard(
-        label: 'Heart Rate',
+        label: t(l, 'heart_rate'),
         value: v.heartRate.toStringAsFixed(0),
-        unit: 'bpm',
+        unit: t(l, 'bpm'),
         icon: Icons.favorite_rounded,
         iconColor: AppColors.emergency,
       ),
       _VitalCard(
-        label: 'HRV',
+        label: t(l, 'hrv_sdnn'),
         value: v.hrvSdnn.toStringAsFixed(0),
-        unit: 'ms',
+        unit: t(l, 'ms'),
         icon: Icons.show_chart_rounded,
         iconColor: AppColors.primary,
       ),
       _VitalCard(
-        label: 'Resp. Rate',
+        label: t(l, 'resp_rate'),
         value: v.respiratoryRate.toStringAsFixed(0),
-        unit: '/min',
+        unit: t(l, 'per_min'),
         icon: Icons.air_rounded,
         iconColor: AppColors.selfCare,
       ),
       _VitalCard(
-        label: 'Confidence',
+        label: t(l, 'confidence'),
         value: _capitalise(v.confidence),
         unit: '',
         icon: _confidenceIcon(v.confidence),

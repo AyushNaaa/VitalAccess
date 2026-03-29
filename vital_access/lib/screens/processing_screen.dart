@@ -97,7 +97,7 @@ class _ProcessingScreenState extends State<ProcessingScreen>
 
     if (vitals == null || intake == null) {
       _stepTimer?.cancel();
-      _showError('Session data missing. Please restart the scan.');
+      _showError(t(context.read<SessionProvider>().language, 'session_missing_error'));
       return;
     }
 
@@ -134,7 +134,7 @@ class _ProcessingScreenState extends State<ProcessingScreen>
       _showError(e.message);
     } catch (e) {
       _stepTimer?.cancel();
-      _showError('Something went wrong. Please try again.');
+      _showError(t(language, 'generic_error'));
     }
   }
 
@@ -290,7 +290,7 @@ class _ProcessingScreenState extends State<ProcessingScreen>
             ),
             const SizedBox(height: 24),
             Text(
-              'Analysis failed',
+              t(lang, 'analysis_failed'),
               style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     color: AppColors.onSurface,
                   ),
@@ -307,7 +307,7 @@ class _ProcessingScreenState extends State<ProcessingScreen>
             ElevatedButton.icon(
               onPressed: _run,
               icon: const Icon(Icons.refresh_rounded),
-              label: const Text('Try Again'),
+              label: Text(t(lang, 'try_again')),
             ),
             const SizedBox(height: 12),
             TextButton(
