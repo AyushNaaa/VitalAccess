@@ -10,7 +10,24 @@
       "Bash(flutter analyze:*)",
       "Bash(export 'PATH=$PATH:/c/Users/divya/AppData/Local/Programs/Microsoft VS Code/bin:/c/Users/divya/flutter/bin:/c/flutter/bin' which flutter)",
       "Read(//c/Users/divya/**)",
-      "Bash(/c/Users/divya/flutter/bin/flutter analyze:*)"
+      "Bash(/c/Users/divya/flutter/bin/flutter analyze:*)",
+      "Bash(/c/Users/divya/flutter/bin/flutter devices:*)",
+      "Bash(/c/Users/divya/flutter/bin/flutter emulators:*)",
+      "Bash(/c/Users/divya/flutter/bin/flutter doctor:*)",
+      "Bash(/c/Users/divya/AppData/Local/Android/Sdk/platform-tools/adb -s emulator-5554 shell \"dumpsys activity activities | grep -E 'mResumedActivity|vital'\" 2>&1)",
+      "Bash(/c/Users/divya/AppData/Local/Android/Sdk/platform-tools/adb -s emulator-5554 shell \"wget -qO- http://10.0.2.2:8000/health\" 2>&1)",
+      "Bash(powershell -Command \"Get-NetIPAddress -AddressFamily IPv4 | Where-Object { \\\\$_.IPAddress -notlike '127.*' -and \\\\$_.IPAddress -notlike '169.*' } | Select-Object IPAddress, InterfaceAlias\" 2>&1)",
+      "Bash(/c/Users/divya/AppData/Local/Android/Sdk/platform-tools/adb -s 532f66a8 exec-out screencap -p)",
+      "Bash(\"/c/Users/divya/Desktop/phone_screen.png\")",
+      "Bash(echo \"screenshot captured: $?\")",
+      "Bash(git fetch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git pull:*)",
+      "Bash(git push:*)",
+      "Bash(curl -s http://10.36.106.123:8000/health)",
+      "Bash(/c/Users/divya/AppData/Local/Android/Sdk/platform-tools/adb devices:*)",
+      "Bash(grep -n \"emergency\\\\|urgent\\\\|routine\\\\|selfCare\\\\|UrgencyLevel\" /c/Users/divya/Desktop/Projects/VitalAccess/vital_access/lib/models/*.dart)"
     ]
   }
 }
